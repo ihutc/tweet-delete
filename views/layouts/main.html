@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=UTF-8" name="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{% block page_title %}{% endblock %}</title>
+    <link rel="icon" id="favicon" href="{{ settings.favicon }}" />
+    <link rel="apple-touch-icon-precomposed" href="{{ settings.apple_touch_icon }}" />
+    <meta name="description" content="{{ settings.description }}" />
+    {% if settings.use_facebook_meta_tags %}
+    <meta property="og:title" content="{{ settings.title }}" />
+    <meta property="og:url" content="{{ settings.url }}" />
+    <meta property="og:description" content="{{ settings.description }}" />
+    <meta property="og:image" content="https://ihut.cc{{ settings.facebook_card_image }}" />
+    {% endif %}
+    {% if settings.use_twitter_meta_tags %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ settings.twitter_card_handle }}">
+    <meta name="twitter:creator" content="{{ settings.twitter_card_handle }}">
+    <meta name="twitter:title" content="{{ settings.title }}">
+    <meta name="twitter:description" content="{{ settings.description }}">
+    <meta name="twitter:image" content="https://ihut.cc{{ settings.twitter_card_image }}">
+    {% endif %}
+    <link type="text/css" rel="stylesheet" href="/public/css/app.css" />
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script src="/public/js/jquery-3.2.1.min.js"></script>
+    <script src="/public/js/jquery.overlaps.js"></script>
+    <script src="/public/js/socket.io.slim.js"></script>
+    <script src="/public/js/app.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.ihut.cc/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+  </body>
+</html>

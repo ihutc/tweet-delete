@@ -1,0 +1,15 @@
+# About
+title: Ian Hutchinson
+description: Delete my tweets
+url: https://ihut.cc
+
+# Images
+favicon: /public/img/favicon.png
+apple_touch_icon: /public/img/apple-touch-icon.png
+
+# Social media
+use_facebook_meta_tags: true
+use_twitter_meta_tags: true
+facebook_card_image: /public/img/social-media-card-twitter-3.png
+twitter_card_image: /public/img/social-media-card-twitter-3.png
+twitter_card_handle: @ihutc

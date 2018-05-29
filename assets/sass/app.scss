@@ -1,0 +1,21 @@
+@import "config";
+@import "reset";
+@import "effects";
+@import "fontface";
+@import "main";
+
+/* Enable WebKit font smoothing */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none !important;
+}
+
+a {
+  -webkit-user-select: none !important;
+}
+
+::selection {
+  color: #FFF;
+  background: #0000FF;
+}

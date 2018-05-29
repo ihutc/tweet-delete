@@ -1,0 +1,43 @@
+{
+  "name": "tweet-delete",
+  "version": "1.0.0",
+  "description": "Deleting tweets on ihut.cc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "gulp deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihutc/tweet-delete.git"
+  },
+  "author": "Ian Hutchinson",
+  "license": "MIT",
+  "homepage": "https://github.com/ihutc/tweet-delete#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "csv-parse": "^2.0.2",
+    "express": "^4.16.2",
+    "fast-ratelimit": "^2.1.8",
+    "grapheme-splitter": "^1.0.2",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "helmet": "^3.11.0",
+    "moment": "^2.20.1",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.12",
+    "nunjucks": "^3.0.1",
+    "pg": "^7.4.1",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4",
+    "twitter": "^1.7.1",
+    "validate-ip-node": "^1.0.6",
+    "yamljs": "^0.3.0"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  }
+}

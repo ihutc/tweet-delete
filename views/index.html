@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block page_title %}{{ settings.title }}{% endblock %}
+
+{% block content %}
+<div id="content">
+  <div id="meta">
+    <img src="/public/img/ian.jpg" alt="Ian Hutchinson's face "/>
+    <p>Ian Hutchinson<a href="https://twitter.com/ihutc">@ihutc</a></p>
+  </div>
+  <div id="tweets"></div>
+  <footer>
+    <p class="main">
+      <span class="mobile-only message message-normal">Tap button to delete my tweets</span>
+      <span class="mobile-only message message-occupied-you">Keep going to delete this tweet</span>
+      <span class="mobile-only message message-occupied">Someone is deleting my tweets</span>
+      <span class="mobile-only message message-rate-limit">Come back later to delete more</span>
+    </p>
+    <p>
+      <span class="desktop-only">Ian Hutchinson</span>
+    </p>
+    <p class="nav">
+      <a id="button-about" href="#">About</a>
+      <a href="https://twitter.com/ihutc" target="_blank">@ihutc</a>
+    </p>
+    <a href="#" id="backspace-button">&larr;</a>
+  </footer>
+</div>
+
+<div id="welcome-message">
+  <p>
+  <span class="message-normal">Press backspace to delete my tweets</span>
+  <span class="message-occupied">Someone is deleting my tweets</span>
+  <span class="message-occupied-you">Keep pressing to delete this tweet...</span>
+  <span class="message-rate-limit">Come back later to delete more</span>
+  </p>
+</div>
+<div id="welcome-message-overlay"></div>
+
+<p id="deleted">Deleted!</p>
+
+<div id="overlay"></div>
+
+<div id="about">
+  <a href="#" id="close">Close</a>
+  <div id="about-body">
+    <p><a href="https://twitter.com/ihutc" target="_blank">My Twitter profile</a> is a graveyard of half-baked opinion and poor cultural taste from my formative years. The presence of these tweets going in my &ldquo;adult&rdquo; life has soured my relationship with social media.</p>
+    <p>For some, content like this has impacted people's lives well after it's written. Thankfully, tools exist that unceremoniously delete old tweets in bulk.</p>
+    <p>This website presents my old tweets one last time. You're invited to press backspace, removing a character from a tweet. Keep pressing until the tweet is permanently deleted from my profile.</p>
+    <p>—</p>
+    <p class="small">I'm Ian Hutchinson. I work across design and code and the physical and digital, with an interest in the politics of technology. I work at <a href="https://projectsbyif.com" target="_blank">IF</a> in London, United Kingdom.</p>
+    <p class="small">I've participated in exhibitions at <a href="https://www.vam.ac.uk/articles/collecting-europe-artist-commissions" target="_blank">Victoria &amp; Albert Museum</a>, <a href="https://vimeo.com/134512571" target="_blank">Science Museum</a> and <a href="https://vimeo.com/134049091" target="_blank">Secret Garden Party</a>.</p>
+    <p class="small link"><a href="https://twitter.com/ihutc" target="_blank">@ihutc</a></p>
+    <p class="small link"><a href="mailto:ian@ihut.cc">ian@ihut.cc</a> <a href="/public/pgp.txt" target="_blank">[PGP key]</a></p>
+  </div>
+</div>
+{% endblock %}
